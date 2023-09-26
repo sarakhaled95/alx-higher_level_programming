@@ -20,7 +20,7 @@ class Node:
         return self.__data
 
     @data.setter
-    def next_node(self, value):
+    def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
@@ -55,7 +55,7 @@ class SinglyLinkedList:
         if self.__head is None:
             new.next_node = None
             self.__head = new
-        elif self.__head.data-> value:
+        elif self.__head.data > value:
             new.next_node = self.__head
             self.__head = new
         else:
