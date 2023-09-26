@@ -11,11 +11,11 @@ class Node:
             data (int): the data of the new node
             next_node (Node): the next node of the new node
         """
-        seld.data = data
+        self.data = data
         self.next_node = next_node
 
     @property
-    def next_node(self):
+    def data(self):
         """sets the data of the new node"""
         return self.__data
 
