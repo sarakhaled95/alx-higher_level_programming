@@ -11,7 +11,7 @@ class Square:
         args:
             size: length of one side of square
         """
-        self.size = size
+        self.__size = size
 
     def area(self):
         """area of square
