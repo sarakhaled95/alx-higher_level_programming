@@ -1,0 +1,7 @@
+import unittest
+from add_integer import add_integer
+
+class TestAddition(unittest.testCase):
+	def test_add(self):
+		self.assertRaises(TypeError, add_integer, "srt", "b")
+	
