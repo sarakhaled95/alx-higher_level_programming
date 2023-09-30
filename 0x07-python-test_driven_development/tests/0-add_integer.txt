@@ -48,12 +48,26 @@ test 2 floats:
 	>>> add_integer(0.8, 0.777)
 	0
 
-test 1 string:
-	>>> add_integer("str", 4)
+test a string:
+	>>> add_integer("school", 4)
 	Traceback (most recent call last)
 	...
-	raise TypeError: a must be an integer
+	TypeError: a must be an integer
+
+test b string:
+	>>> add_integer(4, "school")
+        Traceback (most recent call last)
+        ...
+        TypeError: b must be an integer
+
+test invalid arg:
+        >>> add_integer(None, None)
+	Traceback (most recent call last):
+        ...
+	TypeError: a must be an integer
 
 test invalid arg:
         >>> add_integer(None)
-        TypeError('a must be an integer')
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
