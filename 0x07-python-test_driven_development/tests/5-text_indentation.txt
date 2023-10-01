@@ -1,0 +1,81 @@
+The ''5-text_indentation'' module
+==================================
+using ''text_indentation''
+--------------------------
+
+import module:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+test no delim:
+	>>> text_indentation("hello there")
+	hello there
+
+test with space at the end:
+	>>> text_indentation("hello      ")
+	hello
+
+test with space in the begining:
+	>>> text_indentation("    hello")
+	hello
+
+test with spaces on both sides:
+	>>> text_indentation("    hello    ")
+        hello
+
+test with empty string:
+	>>> text_indentation("")
+
+        
+test with only spaces:
+	>>> text_indentation("     ")
+        
+
+test basic:
+	>>> text_indentation("hello: there")
+        hello:
+	<BLANKLINE>
+	there
+
+test with delim and spaces:
+	>>> text_indentation("   :  .   : ?")
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+
+test all delim:
+	>>> text_indentation("hello: sara: ? school. learning")
+	hello:
+	<BLANKLINE>
+	sara:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	school.
+	<BLANKLINE>
+	learning
+
+test just delim:
+	>>> text_indentation(":?.")
+	:
+        <BLANKLINE>
+        ?
+        <BLANKLINE>
+        .
+        <BLANKLINE>
+
+test None:
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+    	...
+    	TypeError: text must be a string
+
+test number:
+	>>> text_indentation(10)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
