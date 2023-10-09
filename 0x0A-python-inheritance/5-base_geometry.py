@@ -2,6 +2,6 @@
 """BaseGeometry class"""
 
 
-class BaseGeometry(self):
+class BaseGeometry:
     """define class"""
     pass
