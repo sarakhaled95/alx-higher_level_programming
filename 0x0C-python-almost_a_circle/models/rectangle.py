@@ -80,10 +80,10 @@ class Rectangle(Base):
     def __str__(self):
         """string representative of rectangle"""
         return '[{}] ({}) {}/{} - {}/{}'.\
-                format(type(self).__name__, self.id, self.x, self.y,
-                       self.width, self.height)
+               format(type(self).__name__, self.id, self.x, self.y,
+                      self.width, self.height)
 
-    def __update(self, id=None, width=None, height= None, x=None, y=None):
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
         """internal methode for update"""
         if id is not None:
             self.id = id
@@ -96,7 +96,9 @@ class Rectangle(Base):
         if y is not None:
             self.y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates arguments of rectangle"""
         if args:
             self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
