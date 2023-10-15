@@ -36,3 +36,17 @@ class Base:
         if json_string is None or not json_string:
             return "[]"
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """loads instance from dictionary"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square(1)
+        else:
+            new = None
+        new.update(**dictionary)
+        return new
