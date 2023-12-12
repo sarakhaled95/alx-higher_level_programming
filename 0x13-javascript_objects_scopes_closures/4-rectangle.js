@@ -21,11 +21,11 @@ class Rectangle {
     this.height = this.height * 2;
   }
 
-    rotate() {
-        const exch = this.width;
-        this.width = this.hight;
-        this.hight = exch;
-    }
+  rotate () {
+    const exch = this.width;
+    this.width = this.hight;
+    this.hight = exch;
+  }
 
 }
 module.exports = Rectangle;
