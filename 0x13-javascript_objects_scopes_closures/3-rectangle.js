@@ -7,7 +7,6 @@ class Rectangle {
       this.width = w;
     }
   }
-
   print () {
     let i = 0;
     while (i < this.width) {
