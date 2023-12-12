@@ -9,10 +9,8 @@ class Rectangle {
   }
 
   print () {
-    let i = 0;
-    while (i < this.width) {
-      console.log('X'.repeat(this.height));
-      i++;
+    for (let j = 0; j < this.height; j++) {
+      console.log('X'.repeat(this.width));
     }
   }
 
@@ -22,10 +20,7 @@ class Rectangle {
   }
 
   rotate () {
-    const exch = this.width;
-    this.width = this.hight;
-    this.hight = exch;
+    [this.width, this.height] = [this.height, this.width];
   }
-
 }
 module.exports = Rectangle;
