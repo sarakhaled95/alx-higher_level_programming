@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """model state that define state class"""
 
-from sqlalchemy import Column, Integer, String, Metadata
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
-
-myMetadata = Metadata()
-Base = declarative_base(metadata=myMetadata)
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
 
 class State(Base):
@@ -15,5 +14,5 @@ class State(Base):
     """
 
     __tablename__ = 'state'
-    id = column(Integer, unique=True, nullable=False, primary_key=True)
-    name = column(String(128), nullable=False)
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
