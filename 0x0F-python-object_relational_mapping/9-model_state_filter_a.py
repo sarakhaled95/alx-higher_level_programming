@@ -21,6 +21,6 @@ if __name__ == "__main__":
 
     states = session.query(State).filter(State.name.like('%a%'))
     for state in states:
-        print("{}: {}".format(states.id, states.name))
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
