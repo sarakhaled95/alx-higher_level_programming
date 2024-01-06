@@ -3,9 +3,9 @@
 python script that fetches url
 """
 if __name__ == "__main__":
-    from urllib import request
+    import urllib.request
     url = "https://alx-intranet.hbtn.io/status"
-    with request.urlopen(url) as response:
+    with urllib.request.urlopen(url) as response:
         data = response.read()
         print("Body response:")
         print(f"    - type: {type(data)}")
