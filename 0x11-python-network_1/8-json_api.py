@@ -12,7 +12,7 @@ if __name__ == "__main__":
         q = ""
     query = {'q': q}
     r = requests.post(url, data=query)
-    if r.status_code != requests.code.ok or len(r.text) <= 0:
+    if r.status_code != 200 or len(r.text) <= 0:
         print("No result")
         sys.exit()
     else:
